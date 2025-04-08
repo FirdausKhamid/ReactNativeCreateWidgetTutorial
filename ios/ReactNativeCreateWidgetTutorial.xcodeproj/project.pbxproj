@@ -13,6 +13,7 @@
 		3171F6B02DA512D20073A860 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3171F6AF2DA512D20073A860 /* WidgetKit.framework */; };
 		3171F6B22DA512D20073A860 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3171F6B12DA512D20073A860 /* SwiftUI.framework */; };
 		3171F6BF2DA512D40073A860 /* WidgetTutorialExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3171F6AE2DA512D20073A860 /* WidgetTutorialExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3171F6C82DA517BB0073A860 /* RNSharedWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 3171F6C72DA517BB0073A860 /* RNSharedWidget.m */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,9 @@
 		3171F6AF2DA512D20073A860 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3171F6B12DA512D20073A860 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		3171F6C52DA512DC0073A860 /* WidgetTutorialExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetTutorialExtensionDebug.entitlements; sourceTree = "<group>"; };
+		3171F6C62DA517BA0073A860 /* ReactNativeCreateWidgetTutorial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeCreateWidgetTutorial-Bridging-Header.h"; sourceTree = "<group>"; };
+		3171F6C72DA517BB0073A860 /* RNSharedWidget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSharedWidget.m; sourceTree = "<group>"; };
+		3171F6CD2DA518B90073A860 /* RNSharedWidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNSharedWidget.h; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-ReactNativeCreateWidgetTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeCreateWidgetTutorial.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeCreateWidgetTutorial/Pods-ReactNativeCreateWidgetTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-ReactNativeCreateWidgetTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeCreateWidgetTutorial.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeCreateWidgetTutorial/Pods-ReactNativeCreateWidgetTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-ReactNativeCreateWidgetTutorial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeCreateWidgetTutorial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +107,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				3171F6C72DA517BB0073A860 /* RNSharedWidget.m */,
+				3171F6C62DA517BA0073A860 /* ReactNativeCreateWidgetTutorial-Bridging-Header.h */,
+				3171F6CD2DA518B90073A860 /* RNSharedWidget.h */,
 			);
 			name = ReactNativeCreateWidgetTutorial;
 			sourceTree = "<group>";
@@ -217,7 +224,7 @@
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1610;
 					};
 					3171F6AD2DA512D20073A860 = {
 						CreatedOnToolsVersion = 16.1;
@@ -343,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3171F6C82DA517BB0073A860 /* RNSharedWidget.m in Sources */,
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +397,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ReactNativeCreateWidgetTutorial;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeCreateWidgetTutorial-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -417,6 +426,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ReactNativeCreateWidgetTutorial;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeCreateWidgetTutorial-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
